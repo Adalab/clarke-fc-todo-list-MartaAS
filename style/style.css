@@ -1,3 +1,15 @@
+.header__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header__logo{
+  background-image: url('../images/logo.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+}
 .header__calendar{
   display: flex;
   flex-direction: row;
