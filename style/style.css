@@ -1,3 +1,19 @@
-body{
-  background-color: red;
+.header__calendar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 11px;
+}
+#daynumber{
+  font-size: 80px;
+}
+.calendar__text{
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar--month--year{
+  display: flex;
+flex-direction: row;
 }
