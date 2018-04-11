@@ -23,7 +23,7 @@ function getAndShowTasks(){
     var tTask = document.querySelector('#allTask');
     tTask.innerHTML  = detail_task;
     textTask.value = '';
-
+    prueba();
 }
 
 /* Funcion que vacia los datos de localStorage */
@@ -48,6 +48,9 @@ function saveTask(){
     returnTask.unshift(textTask);
     localStorage.setItem('arrTask_task',JSON.stringify(returnTask));
     /* Mostramos el localStorage que tenemos guardado */
+  }
+  if(textTask == ''){
+    alert('Escribe una terea o haz click en el botòn + para mostrar tus teareas');
   }
 
   getAndShowTasks();
@@ -78,8 +81,8 @@ else{
 
 
 
-
-var nombres = document.querySelectorAll('.li');
+function prueba(){
+var nombres = document.querySelectorAll('.container__task .li');
 
 var _toggle_tachar = function(el){
 	el.addEventListener('click', function(){
@@ -87,7 +90,7 @@ var _toggle_tachar = function(el){
 			el.dataset.estado = 1;
 			el.style.textDecoration= 'line-through';
 		}else{
-			el.dataset.estado = 0
+			el.dataset.estado = 0;
 			el.style.textDecoration = 'none';
 		}
 	});
@@ -95,8 +98,14 @@ var _toggle_tachar = function(el){
 
 for( var i=0; i<nombres.length; i++ ){
 	_toggle_tachar(nombres[i]);
+  console.log(nombres[i]);
 	// Loop inicial estado
 	if ( nombres[i].dataset.estado == 1 ){
-		nombres[i].style.textDecoration= 'line-through';
+	//	nombres[i].style.textDecoration= 'line-through';
 	}
+  else
+  {
+    //nombres[i].style.textDecoration= 'none';
+  }
+}
 }

@@ -42,6 +42,9 @@ flex-direction: row;
 .container__task--opacity{
   opacity: 0.2;
 }
-li{
+.li{
   list-style:none
+}
+.container__task{
+  cursor: default;
 }
