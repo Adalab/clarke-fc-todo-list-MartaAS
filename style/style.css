@@ -41,9 +41,6 @@ flex-direction: row;
 .container__task--opacity{
   opacity: 0.2;
 }
-/* .check_line{
-  text-decoration:line-through;
+li{
+  list-style:none
 }
-.li_2{
-  color: red;
-} */

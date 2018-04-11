@@ -11,12 +11,13 @@ var returnTask = JSON.parse(localStorage.getItem('arrTask_task'));
 
 getAndShowTasks();
 
+
 function getAndShowTasks(){
   //comprobamos si hay algun valor en localStorage
     var detail_task = '';
     for(var i = 0;i<returnTask.length;i++)
     {
-      detail_task += '<li id="li"><input class="check" id="check" type="checkbox">'+returnTask[i]+'</li>';
+      detail_task += '<li id="li" class="li"><input class="check" id="check" type="checkbox">'+returnTask[i]+'</li>';
     }
 
 
@@ -52,7 +53,6 @@ function saveTask(){
   taskContainerMenu.style.display = 'none';
   var containerTask = document.querySelector('#allTask');
   containerTask.classList.remove ('container__task--opacity');
-
 }
 //console.log(saveTask());
 
@@ -63,12 +63,26 @@ function saveTask(){
    containerTask.className += " container__task--opacity";
  }
 
-//   var check = document.querySelector('#check');
-// //   if (check.checked==true){
-// //
-// // }
-// var li= document.querySelector('#li')
-// if (document.querySelector('#check').checked)
-//  {
-//    li.className += " li_2";
-//  }
+var nombres = document.querySelectorAll('.li');
+
+var _toggle_tachar = function(el){
+	el.addEventListener('click', function(){
+		if (el.dataset.estado == 0){
+			el.dataset.estado = 1;
+			// AJAX
+			el.style.textDecoration= 'line-through';
+		}else{
+			el.dataset.estado = 0
+			// AJAX
+			el.style.textDecoration = 'none';
+		}
+	});
+}
+
+for( var i=0; i<nombres.length; i++ ){
+	_toggle_tachar(nombres[i]);
+	// Loop inicial estado
+	if ( nombres[i].dataset.estado == 1 ){
+		nombres[i].style.textDecoration= 'line-through';
+	}
+}
