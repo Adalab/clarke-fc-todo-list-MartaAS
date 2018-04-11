@@ -20,7 +20,6 @@ function getAndShowTasks(){
       detail_task += '<li id="li" class="li"><input class="check" id="check" type="checkbox">'+returnTask[i]+'</li>';
     }
 
-
     var tTask = document.querySelector('#allTask');
     tTask.innerHTML  = detail_task;
     textTask.value = '';
@@ -38,13 +37,15 @@ function saveTask(){
   var newTask = document.querySelector('#textTask');
   var textTask = newTask.value;
 
+
   if(textTask == 'empty')
   {
     ResetTasks();
   }
   else
   {
-    returnTask.push(textTask);
+    //unshift para poner en primer lugar del array, shift para poner el ultimo(push)
+    returnTask.unshift(textTask);
     localStorage.setItem('arrTask_task',JSON.stringify(returnTask));
     /* Mostramos el localStorage que tenemos guardado */
   }
@@ -59,9 +60,24 @@ function saveTask(){
  function showForm(){
    var taskContainerMenu = document.querySelector('#container__form');
    var containerTask = document.querySelector('#allTask');
-   taskContainerMenu.style.display = 'block';
-   containerTask.className += " container__task--opacity";
+   // taskContainerMenu.style.display = 'block';
+   //containerTask.className += " container__task--opacity";
+
+if(taskContainerMenu.style.display == 'block'){
+  taskContainerMenu.style.display = 'none';
+  containerTask.classList.remove ('container__task--opacity');
+}
+else{
+  taskContainerMenu.style.display = 'block';
+  containerTask.classList.add ('container__task--opacity');
+}
  }
+
+
+
+
+
+
 
 var nombres = document.querySelectorAll('.li');
 
@@ -69,11 +85,9 @@ var _toggle_tachar = function(el){
 	el.addEventListener('click', function(){
 		if (el.dataset.estado == 0){
 			el.dataset.estado = 1;
-			// AJAX
 			el.style.textDecoration= 'line-through';
 		}else{
 			el.dataset.estado = 0
-			// AJAX
 			el.style.textDecoration = 'none';
 		}
 	});
