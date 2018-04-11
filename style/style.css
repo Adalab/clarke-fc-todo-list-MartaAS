@@ -1,7 +1,13 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
 .header__container{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 100px;
 }
 .header__logo{
   background-image: url('../images/logo.jpg');
@@ -29,3 +35,15 @@
   display: flex;
 flex-direction: row;
 }
+.container__form{
+  display: none;
+}
+.container__task--opacity{
+  opacity: 0.2;
+}
+/* .check_line{
+  text-decoration:line-through;
+}
+.li_2{
+  color: red;
+} */
