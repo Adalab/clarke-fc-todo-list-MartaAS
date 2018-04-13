@@ -1,4 +1,4 @@
-body{
+html{
   display: flex;flex-direction: column;
   justify-content: center;
   margin: 0;
@@ -6,6 +6,9 @@ body{
   height: 100vh;
   color: #484848;
   background: linear-gradient(to bottom,#14d9c4,#0a9a8b);
+}
+.body{
+
 }
 .header__container{
   display: flex;
@@ -61,8 +64,57 @@ flex-direction: row;
 }
 .container__form{
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 20px 0 20px;
+  border-radius: 3px;
+  max-width: 264px;
 }
-.container__task--opacity{
+.form__titleText{
+  color: white;
+padding-left: 22px;
+margin-bottom: 8px;
+}
+
+.container__input{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.form__input{
+  justify-content: center;
+  background-color: #0a9a8b;
+  border: 1px white solid;
+  border-radius: 2px;
+  color: white;
+
+  height: 30px;
+      width: 210px;
+            padding-left: 10px;
+
+}
+::placeholder {
+    color: white;
+}
+.container__btnAdd{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+}
+.btnAdd{
+  background-color: #0a9a8b;
+  border: 2px white solid;
+  border-radius: 22px;
+  color: white;
+  height: 29px;
+    width: 100px;
+    font-weight: bold;
+}
+.opacity{
   opacity: 0.2;
 }
 .li{

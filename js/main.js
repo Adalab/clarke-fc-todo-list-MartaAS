@@ -35,7 +35,7 @@ function getAndShowTasks(){
     var tTask = document.querySelector('#allTask');
     tTask.innerHTML  = detail_task;
     textTask.value = '';
-    CreateEventsToCheckBoxes();
+    //CreateEventsToCheckBoxes();
 }
 
 function CreateEventsToCheckBoxes(){
@@ -106,7 +106,7 @@ function saveTask(){
     getAndShowTasks();
     taskContainerMenu.style.display = 'none';
     var containerTask = document.querySelector('#allTask');
-    containerTask.classList.remove ('container__task--opacity');
+    containerTask.classList.remove ('opacity');
   }
   }
 
@@ -118,13 +118,15 @@ function saveTask(){
    // taskContainerMenu.style.display = 'block';
    //containerTask.className += " container__task--opacity";
 
-if(taskContainerMenu.style.display == 'block'){
+if(taskContainerMenu.style.display == 'flex'){
+  //console.log('1');
   taskContainerMenu.style.display = 'none';
-  containerTask.classList.remove ('container__task--opacity');
+  containerTask.classList.remove ('opacity');
 }
 else{
-  taskContainerMenu.style.display = 'block';
-  containerTask.classList.add ('container__task--opacity');
+  //console.log('0');
+  taskContainerMenu.style.display = 'flex';
+  containerTask.classList.add ('opacity');
 }
  }
 
