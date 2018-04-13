@@ -1,40 +1,63 @@
 body{
+  display: flex;flex-direction: column;
+  justify-content: center;
   margin: 0;
   padding: 0;
   height: 100vh;
-  /* background: linear-gradient(to bottom,#14d9c4,#0a9a8b); */
+  color: #484848;
+  background: linear-gradient(to bottom,#14d9c4,#0a9a8b);
 }
 .header__container{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 100px;
+  background-color: white;
 }
 .header__logo{
   background-image: url('../images/logo.jpg');
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 .header__calendar{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 11px;
+  margin-right: 20px;
 }
 #daynumber{
-  font-size: 80px;
+  font-size: 70px;
+  color: #0a9a8b;
 }
 .calendar__text{
   display: flex;
   flex-direction: column;
+  margin-left: 4px;
+}
+.weekday{
+  font-weight: bolder;
+  margin-bottom: 0;
+  margin-top: 18px;
 }
 
 .calendar--month--year{
   display: flex;
 flex-direction: row;
+}
+.header_line--separatedTop{
+  background-color: #14d9c4;
+  height: 2px;
+  width: auto;
+  border: 0px;
+  margin: 0;
+}
+.main{
+  background-color: white;
 }
 .container__form{
   display: none;
@@ -43,8 +66,44 @@ flex-direction: row;
   opacity: 0.2;
 }
 .li{
-  list-style:none
+  list-style:none;
+  text-decoration:none;
 }
 .container__task{
   cursor: default;
+  background-color: white;
+}
+.li__line--througth{
+  text-decoration: line-through;
+}
+.btnMore{
+  height: 40px;
+    width: 40px;
+    font-size: 32px;
+    font-weight: bold;
+  border-radius: 20px;
+  color: #0a9a8b;
+  border: 2px #14d9c4 solid;
+  background-color: white;
+
+}
+.line--separatedBotton{
+  background-color: #484848;
+  height: 2px;
+  width: auto;
+  border: 0px;
+  margin: 0;
+}
+.container__btnMore{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+
+}
+.container__form{
+  background-color: #0a9a8b;
+  -webkit-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
 }

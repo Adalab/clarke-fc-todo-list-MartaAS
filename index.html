@@ -13,17 +13,21 @@
     <div class="header__calendar">
       <p id="daynumber"</p>
         <div class="calendar__text">
-          <p id="weekday"></p>
+          <p id="weekday" class="weekday"></p>
           <div class="calendar--month--year">
             <p id="month"></p>
             <p id="year"></p>
           </div>
         </div>
-    </div>
-  </header>
-  <main>
 
-    <button id="btnMore" type="button" name="button">+</button>
+    </div>
+
+
+  </header>
+
+  <main class="main">
+  <hr class="header_line--separatedTop"></hr>
+
     <div>
     <ul id="allTask" class="container__task"></ul>
     <div id="container__form" class="container__form">
@@ -32,13 +36,12 @@
       <button id ="btnAdd" type="submit" name="button">Añadir</button>
     </div>
     </div>
+    <hr class="header_line--separatedBotton"></hr>
+    <div class="container__btnMore">
+      <button class="btnMore" id="btnMore" type="button" name="button">+</button>
+    </div>
+
   </main>
-  <!-- <script>
-  var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-  var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
-  var f=new Date();
-  document.write(f.getDate() + "  " + diasSemana[f.getDay()] + "  " + meses[f.getMonth()] + ", " + f.getFullYear());
-</script> -->
 <script src="./js/main.js"></script>
 <script src="./js/calendar.js"></script>
 </body>
