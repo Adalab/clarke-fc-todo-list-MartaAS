@@ -137,7 +137,7 @@ body{
   cursor: default;
   background-color: white;
   padding-left: 20px;
-  min-height: 280px;
+  min-height: 320px;
   font-size: 22px;
 }
 .li__line--througth{
@@ -155,9 +155,9 @@ body{
 
 }
 .line--separatedBotton{
-  background-color: #484848;
+  background-color: #BFC4CC;
   height: 2px;
-  width: auto;
+  width:  100%;
   border: 0px;
   margin: 0;
   width: 100%;
@@ -168,5 +168,5 @@ body{
   justify-content: center;
   text-align: center;
   padding-bottom: 14px;
-  padding-top: 5px;
+  padding-top: 12px;
 }
