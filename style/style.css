@@ -1,5 +1,6 @@
 html{
-  display: flex;flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -7,8 +8,25 @@ html{
   color: #484848;
   background: linear-gradient(to bottom,#14d9c4,#0a9a8b);
 }
-.body{
+body{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+.block{
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 330px;
 
+    /* max-width: 600px; */
+  /* max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  /*float: left;
+    position: relative;
+    left: 50%;*/
 }
 .header__container{
   display: flex;
@@ -60,19 +78,26 @@ flex-direction: row;
   margin: 0;
 }
 .main{
+  display: flex;
+    flex-direction: column;
   background-color: white;
 }
 .container__form{
   display: none;
   flex-direction: column;
   justify-content: center;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 0 34px;
   border-radius: 3px;
   max-width: 264px;
+  background-color: #0a9a8b;
+  -webkit-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
 }
 .form__titleText{
   color: white;
-padding-left: 22px;
+  padding-left: 45px;
+
 margin-bottom: 8px;
 }
 
@@ -90,8 +115,10 @@ margin-bottom: 8px;
   color: white;
 
   height: 30px;
-      width: 210px;
+    width: 165px;
             padding-left: 10px;
+            border-radius: 5px;
+            /* (hex: &#x2714; / dec: &#10004;) */
 
 }
 ::placeholder {
@@ -124,6 +151,9 @@ margin-bottom: 8px;
 .container__task{
   cursor: default;
   background-color: white;
+  padding-left: 20px;
+      min-height: 280px;
+          font-size: 22px;
 }
 .li__line--througth{
   text-decoration: line-through;
@@ -145,17 +175,14 @@ margin-bottom: 8px;
   width: auto;
   border: 0px;
   margin: 0;
+  width: 100%;
 }
 .container__btnMore{
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
+  padding-bottom: 14px;
+    padding-top: 5px;
 
-}
-.container__form{
-  background-color: #0a9a8b;
-  -webkit-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
 }
