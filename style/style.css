@@ -9,24 +9,15 @@ html{
   background: linear-gradient(to bottom,#14d9c4,#0a9a8b);
 }
 body{
-display: flex;
-flex-direction: row;
-justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .block{
   display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 330px;
-
-    /* max-width: 600px; */
-  /* max-width: 400px;
-  display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: center; */
-  /*float: left;
-    position: relative;
-    left: 50%;*/
+  width: 330px;
 }
 .header__container{
   display: flex;
@@ -51,7 +42,7 @@ justify-content: center;
   justify-content: flex-end;
   margin-right: 20px;
 }
-#daynumber{
+.daynumber{
   font-size: 70px;
   color: #0a9a8b;
 }
@@ -65,10 +56,9 @@ justify-content: center;
   margin-bottom: 0;
   margin-top: 18px;
 }
-
 .calendar--month--year{
   display: flex;
-flex-direction: row;
+  flex-direction: row;
 }
 .header_line--separatedTop{
   background-color: #14d9c4;
@@ -79,7 +69,7 @@ flex-direction: row;
 }
 .main{
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
   background-color: white;
 }
 .container__form{
@@ -91,16 +81,14 @@ flex-direction: row;
   max-width: 264px;
   background-color: #0a9a8b;
   -webkit-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 14px 0px rgba(0,0,0,0.75);
 }
 .form__titleText{
   color: white;
   padding-left: 45px;
-
-margin-bottom: 8px;
+  margin-bottom: 8px;
 }
-
 .container__input{
   display: flex;
   flex-direction: row;
@@ -113,24 +101,21 @@ margin-bottom: 8px;
   border: 1px white solid;
   border-radius: 2px;
   color: white;
-
   height: 30px;
-    width: 165px;
-            padding-left: 10px;
-            border-radius: 5px;
-            /* (hex: &#x2714; / dec: &#10004;) */
-
+  width: 165px;
+  padding-left: 10px;
+  border-radius: 5px;
 }
 ::placeholder {
-    color: white;
+  color: white;
 }
 .container__btnAdd{
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
-      padding-top: 20px;
-      padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .btnAdd{
   background-color: #0a9a8b;
@@ -138,8 +123,8 @@ margin-bottom: 8px;
   border-radius: 22px;
   color: white;
   height: 29px;
-    width: 100px;
-    font-weight: bold;
+  width: 100px;
+  font-weight: bold;
 }
 .opacity{
   opacity: 0.2;
@@ -152,17 +137,17 @@ margin-bottom: 8px;
   cursor: default;
   background-color: white;
   padding-left: 20px;
-      min-height: 280px;
-          font-size: 22px;
+  min-height: 280px;
+  font-size: 22px;
 }
 .li__line--througth{
   text-decoration: line-through;
 }
 .btnMore{
   height: 40px;
-    width: 40px;
-    font-size: 32px;
-    font-weight: bold;
+  width: 40px;
+  font-size: 32px;
+  font-weight: bold;
   border-radius: 20px;
   color: #0a9a8b;
   border: 2px #14d9c4 solid;
@@ -183,6 +168,5 @@ margin-bottom: 8px;
   justify-content: center;
   text-align: center;
   padding-bottom: 14px;
-    padding-top: 5px;
-
+  padding-top: 5px;
 }
