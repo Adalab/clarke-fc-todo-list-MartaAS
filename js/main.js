@@ -9,7 +9,6 @@ btnAddElement.addEventListener("click", saveTask);
 
 //array guardado en LS
 var returnTask = JSON.parse(localStorage.getItem('arrTask'));
-
 if(returnTask){
   getAndShowTasks();
 }
@@ -17,7 +16,29 @@ else{
   returnTask= [];
 }
 
-//
+var nombres = document.querySelectorAll('.container__task .li');
+//console.log(nombres);
+var crossTask = function(element){
+  element.addEventListener('click', function(){
+
+    var checked = element.querySelector("input[type='checkbox']:checked");
+
+    if(checked){
+      element.classList.add('li__line--througth');
+    }
+    else{
+      element.classList.remove('li__line--througth');
+    }
+    updateTaskCheck();
+  });
+}
+
+//genera el evento de escucha en cada check
+for( var i=0; i<nombres.length; i++ ){
+  crossTask(nombres[i]);
+}
+
+
 function getAndShowTasks(){
   //comprobamos si hay algun valor en localStorage
   var detail_task = '';
@@ -32,10 +53,10 @@ function getAndShowTasks(){
 
   var tTask = document.querySelector('#allTask');
   tTask.innerHTML  = detail_task;
-  textTask.value = '';
 }
 
 /* Funcion que vacia los datos de localStorage */
+//set subir get obtener
 function ResetTasks(){
   returnTask = [];
   localStorage.setItem('arrTask',JSON.stringify(returnTask));
@@ -89,26 +110,7 @@ function showForm(){
 }
 
 
-var nombres = document.querySelectorAll('.container__task .li');
-//console.log(nombres);
-var _toggle_tachar = function(element){
-  element.addEventListener('click', function(){
 
-    var checked = element.querySelector("input[type='checkbox']:checked");
-
-    if(checked){
-      element.classList.add('li__line--througth');
-    }
-    else{
-      element.classList.remove('li__line--througth');
-    }
-    updateTaskCheck();
-  });
-}
-
-for( var i=0; i<nombres.length; i++ ){
-  _toggle_tachar(nombres[i]);
-}
 
 //funcion para guardar valor del check y machacar array anterior
 function updateTaskCheck(){
